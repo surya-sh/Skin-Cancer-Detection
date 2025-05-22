@@ -86,28 +86,38 @@ In this project we are assuming you will be using an Unix based operating system
 
 ### Install Package Manager
 Homebrew is an os agnostic package manager which we will be using to install the required software and libraries.
+
 Homebrew webpage: https://brew.sh/
+
 Installation:-
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-Software/Libraries
+
+### Install Software/Libraries
 We will now use homebrew to install all the required software:-
+
 ```bash
 brew install git python3
 ```
+
 We will now use pip to install the required libraries
+
 ```bash
 pip install numpy tensorflow gradio
 ```
+
 ### Getting the Source Code
 The source code is available in github which could be obtained via git
+
 ```bash
 git clone https://github.com/surya-sh/Skin-Cancer-Detection.git
 ```
 
 ### Running the Code
 We would need source the packages and run the code
+
 ```bash
 cd Execution/
 source bin/activate
