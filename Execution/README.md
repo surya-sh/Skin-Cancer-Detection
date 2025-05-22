@@ -73,11 +73,6 @@ The training configuration:
 - Batch size: **32**
 - Epochs: **10**
 
-## Metrics
-- **Accuracy**: The primary evaluation metric was accuracy. The model achieved **73%** accuracy on the validation set.
-  
-  Further improvements can be achieved with additional training or fine-tuning using transfer learning methods.
-
 ## Execution Steps
 
 ### Operating System
