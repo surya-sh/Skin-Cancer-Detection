@@ -78,25 +78,43 @@ The training configuration:
   
   Further improvements can be achieved with additional training or fine-tuning using transfer learning methods.
 
-## How to Use
-You can use this model to classify skin lesion images. Below is an example code snippet to load the model and make predictions:
+## Execution Steps
 
-```python
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
-import numpy as np
+### Operating System
 
-# Load the model from Hugging Face
-model = load_model('skin_cancer_model.h5')
+In this project we are assuming you will be using an Unix based operating system which might include the following:- 
 
-# Preprocess the image and make a prediction
-img = image.load_img('test_image.jpg', target_size=(224, 224))
-img_array = image.img_to_array(img)
-img_array = np.expand_dims(img_array, axis=0) / 255.0
+    1. MacOS
+    2. Any distro of Linux
+    3. Any variant of BSD
+    4. WSL in Windows 11
 
-predictions = model.predict(img_array)
-predicted_class = np.argmax(predictions, axis=1)[0]
+### Install Package Manager
+Homebrew is an os agnostic package manager which we will be using to install the required software and libraries.
+Homebrew webpage: https://brew.sh/
+Installation:-
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Software/Libraries
+We will now use homebrew to install all the required software:-
+```bash
+brew install git python3
+```
+We will now use pip to install the required libraries
+```bash
+pip install numpy tensorflow gradio
+```
+### Getting the Source Code
+The source code is available in github which could be obtained via git
+```bash
+git clone https://github.com/surya-sh/Skin-Cancer-Detection.git
+```
 
-# Mapping class index to class name
-class_names = ['akiec', 'bcc', 'bkl', 'df', 'nv', 'vasc', 'mel']
-print(f"Predicted class: {class_names[predicted_class]}")
+### Running the Code
+We would need source the packages and run the code
+```bash
+cd Execution/
+source bin/activate
+python3 app.py
+```
